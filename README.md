@@ -1,5 +1,5 @@
 # countdown
-Vue+ElementUI 实现发送短信验证码后按钮的倒计时及禁用功能
+Vue 实现发送短信验证码后按钮的倒计时及禁用功能
 
 > A Vue.js project
 
