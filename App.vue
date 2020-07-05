@@ -4,18 +4,27 @@
 		<count-down></count-down> 
         <br>
         <br>
-        <count-down-two></count-down-two> 
+        <count-down-two></count-down-two>
+        <br>
+        <br>
+        <count-down-third :fn="getAdminVerifyCode" :deftext="'获取验证码'" ref="child" :second="60" />
     </div>
 </template>
 <script>
-import CountDown from './components/CountDown.vue';
-import CountDownTwo from './components/CountDown2.vue';
+import CountDown from './components/countdown.vue';
+import CountDownTwo from './components/countdown2.vue';
+import CountDownThird from './components/countdown3.vue';
 export default {
     name: 'app',
-    components: { CountDown, CountDownTwo },
+    components: { CountDown, CountDownTwo, CountDownThird },
     data() {
         return {
             
+        }
+    },
+    methods: {
+        getAdminVerifyCode() {
+            this.$refs.child.countDown()
         }
     }
 }
