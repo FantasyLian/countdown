@@ -16,7 +16,12 @@ export default {
 		}
 	},
 	created() {
-		
+
+	},
+	destroyed() {
+		clearInterval(this.timer)
+		this.timer = null
+		console.log('定时器已销毁')
 	},
 	methods: {
 		getCode() {
